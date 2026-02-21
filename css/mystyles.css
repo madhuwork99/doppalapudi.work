@@ -268,6 +268,7 @@ nav a {
 }
 
 /* ========== SKILLS GRID ========== */
+/* Skill Grid Container */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -275,21 +276,28 @@ nav a {
   margin-top: 40px;
 }
 
+/* Skill Card */
 .skill-card {
   background: var(--card-bg);
-  padding: 20px;
+  padding: 25px 20px;
   border-radius: 20px;
   font-weight: 600;
-  transition: 0.3s;
+  border: 1px solid rgba(0, 0, 0, 0.08); /* subtle border for light mode */
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
+/* Hover Effect */
 .skill-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent); /* accent border on hover */
 }
 
+/* Dark Mode */
 body.dark .skill-card {
   background: var(--card-bg);
+  border: 2px solid rgba(255, 255, 255, 0.15);
 }
 
 /* ========== TIMELINE ========== */
@@ -612,3 +620,4 @@ body.dark .achievement-item p {
     margin: 10px 10px 0 0;
   }
 }
+
